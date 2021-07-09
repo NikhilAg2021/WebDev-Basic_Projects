@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Using HTML and CSS to design the object and container it will lie in
+     Using JavaScript to make the object move and react based on the clients commands-->
+<html>
+    <head>
+        <!-- Adding the size in which the window will open-->
+        <meta name="viewport"
+              content="width=device-width, 
+              initial-scale=1,
+              user-scalable=no"/>
+    <title> Draggable Object</title>
+    <!-- Designing the Container-->
+    <style>
+        #container
+        {
+             width: 90%;
+             height: 800px;
+             background-color: aqua;
+             display: flex;
+             align-items: center;
+             justify-content:center;
+             overflow: hidden;
+             border-radius: 7px;
+             touch-action: none;
+
+
+        }
+        #item 
+        {
+             width: 100px;
+             height: 100px;
+             background-color: rgba(255, 0, 0, 0.924);
+             border: 10px solid rgb(38, 255, 0);
+             border-radius: 50%;
+             touch-action: none;
+             user-select: none;
+        }
+        #item:active 
+        {
+            background-color: rgb(162, 67, 224);
+        }
+        #item:hover
+         {
+             cursor: pointer;
+             border-width: 30px;
+            
+         }
+    </style>
+
+    </head>
+    <body>
+
+        <!-- Writing div tags to divide the code into parts to style it using CSS-->
+        <div id= "outer-container">
+            <div id= "container">
+                <div id='item'>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- JS code to make the object move-->
+        <script src='Draggable_div.js'> </script>
+            
+    </body>
+</html>
