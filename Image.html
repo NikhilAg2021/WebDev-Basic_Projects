@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport"
+              content="width=device-width, 
+              initial-scale=1,
+              user-scalable=no"/>
+        <title>Image Display</title>
+
+    </head>
+    <style>
+    #container
+    {
+             width: 80%;
+             height:80%;
+             background-color: aqua;
+             display: flex;
+             align-items: center;
+             justify-content:center;
+             overflow: auto;
+             border-radius: 7px;
+             
+    }
+
+    #background_image
+    {
+        position:relative;       
+        width: 90%;
+        height: 90%;
+        resize:both;
+        overflow: auto;
+         
+       background-size:flex-end;
+    }
+    #image {
+        position: absolute;
+        resize:both;
+        overflow:auto;
+        z-index: 9;
+        background-color: #f1f1f1;
+        border: 1px solid #d3d3d3;
+        text-align: center;
+      }
+      
+      #imageheader {
+        padding: 10px;
+        cursor: move;
+        z-index: 10;
+        background-color: #2196F3;
+        color: #fff;
+      }
+     
+      
+        .fill {
+                display: block;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+         .fill img
+       {
+                block-size: 100%;                
+                min-width: 100%;
+                min-height: 100%;
+       }
+
+      </style>
+    <body>
+    <div id="container">
+    <div id="background_image" class="fill">
+            <div id="image"  class="fill" >
+                 <div id="imageheader">Click here to move</div>
+                  <img src="https://s0.2mdn.net/10822102/AWS-Graviton2-Display-Ad-300x250px-vB-apps__002_.png.png"/>          
+            </div>
+         <img src="https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" />
+    </div>
+</div>
+                    
+          <script  src='Drag_and_drop.js'> </script>
+          
+      </body>
+</html>
